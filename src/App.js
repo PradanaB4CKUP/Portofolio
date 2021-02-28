@@ -25,13 +25,13 @@ function App() {
         <div className="container-fluid">
           <Header />
           <Route path="/" exact component={Body} />
-          <Route path="/about" component={About} />
+          {/* <Route path="/about" component={About} /> */}
           <Route path="/contact" component={Contact} />
           <Route path="/demo" component={Demo} />
           <Route path="/services" component={Services} />
           <Route path="/testimonial" component={Testimonial} />
           <Route path="/opencamera" component={Opencamera} />
-          <Containeraction />
+          
           <Footer />
         </div>
       </div>

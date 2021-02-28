@@ -11,7 +11,9 @@ class Body extends Component {
                         <div className="text-white tm-home-center">
                             <p className="text-uppercase tm-slogan">Smart Ads</p>
                             <center>
-                                <iframe width="1300" height="600" src="https://www.youtube.com/embed/QgxmyJd-55U?autoplay=1&mute=1&loop=1&playlist=QgxmyJd-55U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/QgxmyJd-55U?autoplay=1&mute=1&loop=1&playlist=QgxmyJd-55U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
                             </center>
                             <hr className="tm-home-hr" />
                             <h2 className="tm-home-title tm-home-center">The Best Survei Tool For You</h2>
