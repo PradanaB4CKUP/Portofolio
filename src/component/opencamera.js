@@ -254,6 +254,31 @@ class opencamera extends Component {
                   height: 480,
                 }}
               />
+              <div>
+                <center>
+                  <form
+                    name="myForm"
+                    id="myForm"
+                    target="_myFrame"
+                    action="/adddata"
+                    method="POST"
+                  >
+                    Hasil ekspresi:<br></br>
+                    <span name="informasi" id="informasi">
+                      {" "}
+                      {result.length ? result.join() : this.state.txtResult}
+                    </span>
+                    {/* ini data <input name="posting" id="posting"></input> */}
+                    {/* <button
+                type="submit"
+                value="submit"
+                className="btn btn-secondary"
+                >
+                SUBMIT
+              </button> */}
+                  </form>
+                </center>
+              </div>
             </div>
           ) : (
             <div>
@@ -282,29 +307,6 @@ class opencamera extends Component {
               </div>
             </div>
           )}
-          <center>
-            <form
-              name="myForm"
-              id="myForm"
-              target="_myFrame"
-              action="/adddata"
-              method="POST"
-            >
-              Hasil ekspresi:<br></br>
-              <span name="informasi" id="informasi">
-                {" "}
-                {result.length ? result.join() : this.state.txtResult}
-              </span>
-              {/* ini data <input name="posting" id="posting"></input> */}
-              {/* <button
-                type="submit"
-                value="submit"
-                className="btn btn-secondary"
-              >
-                SUBMIT
-              </button> */}
-            </form>
-          </center>
         </div>
         <center>
           <footer className="row">
