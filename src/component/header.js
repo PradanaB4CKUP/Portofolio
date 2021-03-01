@@ -11,8 +11,8 @@ class Header extends Component {
                     <div className="tm-brand-container tm-bg-white-transparent">
                         <i className="fas fa-2x fa-pen tm-brand-icon"></i>
                         <div className="tm-brand-texts">
-                            <h1 className="text-uppercase tm-brand-name">SMART ADS</h1>
-                            {/* <p className="small">new app landing page</p> */}
+                            <h1 className="text-uppercase tm-brand-name">Y O U D S</h1>
+                            <p className="small">Ads On Yours</p>
                         </div>
                     </div>
                 </div>

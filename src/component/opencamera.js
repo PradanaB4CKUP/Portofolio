@@ -11,7 +11,7 @@ import Webcam from "react-webcam";
 import axios from "axios";
 // import { drawMesh } from "../utilities";
 
-class opencamera extends Component {
+class Opencamera extends Component {
   emotion_labels = [
     "angry",
     "disgust",
@@ -213,100 +213,112 @@ class opencamera extends Component {
   }
   render() {
     let result = this.state.restRecog;
+    const videoConstraints = {facingMode:'user'}
     return (
       <div className="tm-bg-white tm-call-to-action-text" id="tmCallToAction">
         <div className="tm-bg-white tm-call-to-action-text">
           {!this.state.viewStart ? (
-            <div className="inline">
-              {/* <canvas id="canvas" src="" style=" margin-top:20px;" /> */}
-              <canvas
-                ref={this.canvasRef}
-                // ref={(ref) => {
-                //   this.canvasRef = ref;
-                // }}
-                style={{
-                  // position: "absolute",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  left: "11%",
-                  right: "auto",
-                  textAlign: "center",
-                  zindex: 9,
-                  width: 640,
-                  height: 480,
-                }}
-              />
-              <Webcam
-                ref={this.webcamRef}
-                // ref={(ref) => {
-                //   this.webcamRef = ref;
-                // }}
-                style={{
-                  position: "absolute",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  // top: "2%",
-                  left: "11%",
-                  right: "auto",
-                  textAlign: "center",
-                  zindex: 9,
-                  width: 640,
-                  height: 480,
-                }}
-              />
+            <center>
               <div>
+                {/* <canvas id="canvas" src="" style=" margin-top:20px;" /> */}
                 <center>
-                  <form
-                    name="myForm"
-                    id="myForm"
-                    target="_myFrame"
-                    action="/adddata"
-                    method="POST"
-                  >
-                    Hasil ekspresi:<br></br>
-                    <span name="informasi" id="informasi">
-                      {" "}
-                      {result.length ? result.join() : this.state.txtResult}
-                    </span>
-                    {/* ini data <input name="posting" id="posting"></input> */}
-                    {/* <button
+                  <canvas
+                    ref={this.canvasRef}
+                    // ref={(ref) => {
+                    //   this.canvasRef = ref;
+                    // }}
+                    style={{
+                      // position: "absolute",
+                      // marginLeft: "auto",
+                      // marginRight: "auto",
+                      //left: "11%",
+                      //left: "auto",
+                      //right: "auto",
+                      // textAlign: "center",
+                      // zindex: 9,
+                      width: '500',
+                      height: '500',
+                    }}
+                  />
+                </center>
+                <center>
+                  <Webcam
+                    ref={this.webcamRef}
+                    // ref={(ref) => {
+                    //   this.webcamRef = ref;
+                    // }}
+                    audio={false}
+                    style={{
+                      // position: "absolute",
+                      // marginLeft: "auto",
+                      // marginRight: "auto",
+                      // top: "2%",
+                      // left: "11%",
+                      //left: "auto",
+                      // right: "auto",
+                      // textAlign: "center",
+                      // zindex: 9,
+                      width: '500',
+                      height: '500',
+                      videoConstraints: {videoConstraints}
+                    }}
+                  />
+                </center>
+
+                <div>
+                  <center>
+                    <form
+                      name="myForm"
+                      id="myForm"
+                      target="_myFrame"
+                      action="/adddata"
+                      method="POST"
+                    >
+                      Hasil ekspresi:<br></br>
+                      <span name="informasi" id="informasi">
+                        {" "}
+                        {result.length ? result.join() : this.state.txtResult}
+                      </span>
+                      {/* ini data <input name="posting" id="posting"></input> */}
+                      {/* <button
                 type="submit"
                 value="submit"
                 className="btn btn-secondary"
                 >
                 SUBMIT
               </button> */}
-                  </form>
-                </center>
+                    </form>
+                  </center>
+                </div>
               </div>
-            </div>
+            </center>
           ) : (
-            <div>
-              <center style={{ padding: "10px" }}>
-                <button
-                  type="button"
-                  id="start"
-                  className="btn btn-primary"
-                  onClick={this.startVideo}
-                >
-                  Start Video
+              <div>
+                <center style={{ padding: "10px" }}>
+                  <button
+                    type="button"
+                    id="start"
+                    className="btn btn-primary"
+                    onClick={this.startVideo}
+                  >
+                    Start Video
                 </button>
-              </center>
-              <center className="tm-call-to-action-title">
-                <center>
-                  <span id="original_video"></span>
                 </center>
-                <video id="video" width="500px"></video>
-              </center>
-              <div className="tm-call-to-action-description">
-                <center style={{ padding: "10px", margin: "5px" }}>
-                  <h4>
-                    <span id="status">Model Loading...</span>
-                  </h4>
+                <center className="tm-call-to-action-title">
+                  <center>
+                    <span id="original_video"></span>
+                  </center>
+                  <video id="video" width="500px"></video>
                 </center>
+                <div className="tm-call-to-action-description">
+                  <center style={{ padding: "10px", margin: "5px" }}>
+                    <h4>
+                      <span id="status">Model Loading...</span>
+                    </h4>
+                  </center>
+                </div>
               </div>
-            </div>
-          )}
+            )}
         </div>
         <center>
           <footer className="row">
@@ -323,4 +335,4 @@ class opencamera extends Component {
   }
 }
 
-export default opencamera;
+export default Opencamera;

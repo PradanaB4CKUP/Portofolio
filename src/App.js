@@ -26,13 +26,13 @@ function App() {
           <Header />
           <Route path="/" exact component={Body} />
           {/* <Route path="/about" component={About} /> */}
-          <Route path="/contact" component={Contact} />
-          <Route path="/demo" component={Demo} />
+          {/* <Route path="/contact" component={Contact} />
+          <Route path="/demo" component={Demo} /> */}
           <Route path="/services" component={Services} />
-          <Route path="/testimonial" component={Testimonial} />
+          {/* <Route path="/testimonial" component={Testimonial} /> */}
           <Route path="/opencamera" component={Opencamera} />
           
-          <Footer />
+          
         </div>
       </div>
     </Router>
