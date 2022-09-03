@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 mongoose.connect(
-  "mongodb+srv://qubisa:root@qubisa.pvp0d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongodb+srv://qubisa:root@qubisa.pvp0d.mongodb.net/test?retryWrites=true&w=majority",
   // mongoose.connect("mongodb+srv://root:root@cluster0.prm7t.mongodb.net/postdata?retryWrites=true&w=majority",
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
