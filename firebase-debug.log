@@ -1,0 +1,24 @@
+[debug] [2021-03-02T16:03:09.478Z] ----------------------------------------------------------------------
+[debug] [2021-03-02T16:03:09.521Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\SUDARNO\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-03-02T16:03:09.523Z] CLI Version:   9.5.0
+[debug] [2021-03-02T16:03:09.523Z] Platform:      win32
+[debug] [2021-03-02T16:03:09.523Z] Node Version:  v14.15.0
+[debug] [2021-03-02T16:03:10.013Z] Time:          Tue Mar 02 2021 23:03:09 GMT+0700 (Western Indonesia Time)
+[debug] [2021-03-02T16:03:10.014Z] ----------------------------------------------------------------------
+[debug] [2021-03-02T16:03:10.014Z] 
+[debug] [2021-03-02T16:03:10.054Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-03-02T16:03:10.734Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-02T16:03:10.736Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Belajar Javascript\qubisa_project\qubisa_web
+
+[debug] [2021-03-02T16:03:13.245Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-03-02T16:03:13.246Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
